@@ -5,10 +5,8 @@ import {
   DrawerItemList,
 } from "@react-navigation/drawer";
 
-import HomeNavigator from "./HomeNavigator";
-import LoginNavigator from "./LoginNavigator";
-
-import Icon from "react-native-vector-icons/MaterialIcons";
+import HomeDrawerNavigator from "./HomeNavigator";
+import LoginDrawerNavigator from "./LoginNavigator";
 
 import { Colors } from "../shared/styles";
 
@@ -25,22 +23,8 @@ const DrawerNavigation = () => (
         </SafeAreaView>
       </View>
     )}>
-    <Drawer.Screen
-      name="Home"
-      component={HomeNavigator}
-      options={{
-        drawerIcon: ({ color }) => <Icon name="home" size={23} color={color} />,
-      }}
-    />
-    <Drawer.Screen
-      name="Login"
-      component={LoginNavigator}
-      options={{
-        drawerIcon: ({ color }) => (
-          <Icon name="account-circle" size={23} color={color} />
-        ),
-      }}
-    />
+    {HomeDrawerNavigator(Drawer.Screen)}
+    {LoginDrawerNavigator(Drawer.Screen)}
   </Drawer.Navigator>
 );
 
