@@ -1,7 +1,9 @@
-import { createSlice } from "redux-starter-kit";
+import { createSlice } from "@reduxjs/toolkit";
+
+import { scope as name } from "./config";
 
 const homeSlice = createSlice({
-  name: "home",
+  name,
   initialState: {},
   reducers: {
     getHome(state, action) {

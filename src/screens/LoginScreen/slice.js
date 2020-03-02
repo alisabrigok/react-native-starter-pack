@@ -1,7 +1,9 @@
-import { createSlice } from "redux-starter-kit";
+import { createSlice } from "@reduxjs/toolkit";
 
-const user = createSlice({
-  name: "user",
+import { scope as name } from "./config";
+
+const userSlice = createSlice({
+  name,
   initialState: {},
   reducers: {
     getUser(state, action) {
@@ -10,7 +12,7 @@ const user = createSlice({
   },
 });
 
-export const { actions, reducer } = user;
+export const { actions, reducer } = userSlice;
 
 export const { getUser } = actions;
 
