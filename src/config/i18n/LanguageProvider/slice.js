@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-const DEFAULT_LOCALE = "en";
+import { DEFAULT_LOCALE } from "..";
 
 export const initialState = { locale: DEFAULT_LOCALE };
 
@@ -9,7 +8,7 @@ const languageProviderSlice = createSlice({
   initialState,
   reducers: {
     changeLocale(state, action) {
-      state.locale = action.locale;
+      state.locale = action.payload;
     },
   },
 });
