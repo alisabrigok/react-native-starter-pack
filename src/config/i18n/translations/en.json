@@ -1,1 +1,4 @@
-{}
+{
+  "screens.HomeScreen.home": "Home",
+  "screens.LoginScreen.login": "Login"
+}
