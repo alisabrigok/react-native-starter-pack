@@ -1,6 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import { scope as name } from "./config";
+import { scope as name } from "./messages";
 
 const homeSlice = createSlice({
   name,

@@ -2,19 +2,14 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
-import HomeScreen from "../screens/HomeScreen";
-import HomeScreenOptions from "../screens/HomeScreen/screenOptions";
+import WithHomeScreen from "../screens/HomeScreen/config";
 import { defaultScreenOptions } from "../shared/navigatorOptions";
 
 const HomeStackNavigator = createStackNavigator();
 
 const HomeNavigator = props => (
   <HomeStackNavigator.Navigator screenOptions={defaultScreenOptions}>
-    <HomeStackNavigator.Screen
-      name="Home"
-      component={HomeScreen}
-      options={HomeScreenOptions}
-    />
+    {WithHomeScreen(HomeStackNavigator.Screen)}
   </HomeStackNavigator.Navigator>
 );
 

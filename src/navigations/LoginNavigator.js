@@ -2,19 +2,14 @@ import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import Icon from "react-native-vector-icons/MaterialIcons";
 
-import LoginScreen from "../screens/LoginScreen";
-import LoginScreenOptions from "../screens/LoginScreen/screenOptions";
+import WithLoginScreen from "../screens/LoginScreen/config";
 import { defaultScreenOptions } from "../shared/navigatorOptions";
 
 const LoginStackNavigator = createStackNavigator();
 
 const LoginNavigator = props => (
   <LoginStackNavigator.Navigator screenOptions={defaultScreenOptions}>
-    <LoginStackNavigator.Screen
-      name="Login"
-      component={LoginScreen}
-      options={LoginScreenOptions}
-    />
+    {WithLoginScreen(LoginStackNavigator.Screen)}
   </LoginStackNavigator.Navigator>
 );
 
